@@ -25,8 +25,8 @@ instance Semigroup GL.ModifierKeys where
   (<>)   = mappendModifierKeys
 
 instance Monoid GL.ModifierKeys where
-  mempty = GL.ModifierKeys False False False False
+  mempty = GL.ModifierKeys False False False False False False
 
 mappendModifierKeys ∷ GL.ModifierKeys → GL.ModifierKeys → GL.ModifierKeys
-mappendModifierKeys (GL.ModifierKeys a b c d) (GL.ModifierKeys a' b' c' d') =
-  GL.ModifierKeys (a ∨ a') (b ∨ b') (c ∨ c') (d ∨ d')
+mappendModifierKeys (GL.ModifierKeys a b c d e f) (GL.ModifierKeys a' b' c' d' e' f') =
+  GL.ModifierKeys (a ∨ a') (b ∨ b') (c ∨ c') (d ∨ d') (e ∨ e') (f ∨ f')

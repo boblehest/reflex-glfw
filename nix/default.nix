@@ -1,6 +1,6 @@
 { mkDerivation, base, base-unicode-symbols, containers
-, dependent-sum, ghc-prim, GLFW-b, lens, mtl, OpenGL, OpenGLRaw
-, pretty, primitive, ref-tf, reflex, stdenv, stm, transformers
+, dependent-sum, ghc-prim, GLFW-b, lens, lib, mtl, OpenGL
+, OpenGLRaw, pretty, primitive, ref-tf, reflex, stm, transformers
 }:
 mkDerivation {
   pname = "reflex-glfw";
@@ -18,5 +18,5 @@ mkDerivation {
   ];
   homepage = "https://github.com/deepfire/reflex-glfw/";
   description = "A GLFW-b adapter for Reflex FRP";
-  license = stdenv.lib.licenses.bsd3;
+  license = lib.licenses.bsd3;
 }

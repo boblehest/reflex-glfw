@@ -476,11 +476,11 @@ instance Show ButtonEventMask where
     showModifierKeys mods
 
 subsetModifierKeys ∷ GL.ModifierKeys → GL.ModifierKeys → Bool
-subsetModifierKeys (GL.ModifierKeys a b c d) (GL.ModifierKeys a' b' c' d') =
-  (not a ∨ a') ∧ (not b ∨ b') ∧ (not c ∨ c') ∧ (not d ∨ d')
+subsetModifierKeys (GL.ModifierKeys a b c d e f) (GL.ModifierKeys a' b' c' d' e' f') =
+  (not a ∨ a') ∧ (not b ∨ b') ∧ (not c ∨ c') ∧ (not d ∨ d') ∧ (not e ∨ e') ∧ (not f ∨ f')
 
 showModifierKeys ∷ GL.ModifierKeys → String
-showModifierKeys (GL.ModifierKeys shift ctrl alt super) = ("(Modif"<>) ∘ (<>")") $
+showModifierKeys (GL.ModifierKeys shift ctrl alt super _ _) = ("(Modif"<>) ∘ (<>")") $
     concat $ [" SHIFT" | shift] <> [" CTRL" | ctrl] <> [" ALT" | alt] <> [" SUPER" | super]
 
 instance Semigroup ButtonEventMask where

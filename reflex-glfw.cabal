@@ -55,6 +55,7 @@ library
                      , ref-tf
                      , stm >=2.4
                      , transformers >=0.5
+                     , semialign
 
 executable reflex-glfw-demo
   default-language:    Haskell2010
