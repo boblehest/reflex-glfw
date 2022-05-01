@@ -141,6 +141,7 @@ type RGLFW t m
     , MonadIO (Performable m)
     --
     , Typeable t
+    , Adjustable t m
     )
 
 -- Reflex/Host/Class.hs:
