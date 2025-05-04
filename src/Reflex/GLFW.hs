@@ -134,6 +134,7 @@ type RGLFW t m
     , MonadHold t m
     --
     , PostBuild t m
+    , TriggerEvent t m
     --
     , MonadIO m
     , PerformEvent t m
